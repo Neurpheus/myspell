@@ -59,7 +59,9 @@ public class FullDictionaryWriter implements WordFormsProcessor {
                 for (Iterator it = forms.iterator(); it.hasNext(); i++) {
                     s = it.next().toString().trim();
                     out.print(s);
-                    out.print(' ');
+                    if (it.hasNext()) {
+                        out.print(',');
+                    }
                 }
                 out.println();
             }
